@@ -156,60 +156,6 @@
       width: 100%;
     }
 
-    /* ---------- TOPBAR ---------- */
-    /* .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(11, 12, 11, 0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-      gap: 16px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-      font-size: 19px;
-    }
-
-    .brand {
-      text-decoration: none;
-    }
-
-    .brand-logo {
-      height: 30px;
-      width: 30px;
-      border-radius: 8px;
-      flex: 0 0 auto;
-    }
-
-    .topbar-right {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .trust-micro {
-      font-size: 13px;
-      color: var(--text-muted);
-      display: none;
-    }
-
-    @media (min-width: 640px) {
-      .trust-micro {
-        display: block;
-      }
-    } */
 
     /* ---------- HERO ---------- */
     .hero {
@@ -223,26 +169,7 @@
       align-items: start;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--lime);
-      border: 1px solid rgba(189, 255, 123, 0.3);
-      border-radius: var(--radius);
-      padding: 7px 16px;
-      margin-bottom: 24px;
-      font-weight: 600;
-    }
-
-    .eyebrow .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--lime);
-      box-shadow: 0 0 10px var(--lime);
-    }
+  
 
     h1.hero-title {
       font-size: clamp(34px, 4.6vw, 56px);
@@ -951,55 +878,55 @@
     
 
     <main class="pt-30">
-      <!-- 2. HERO -->
-      <section class="hero" id="inicio">
-        <div class="container hero-grid">
+
+      <!-- hero -->
+      <section class="h-screen pt-4 flex flex-col gap-15">
+          <!-- <img src="images/iso.svg" alt="" class="absolute -top-30"> -->
+          <ul class="flex gap-30 w-screen box-border text-center justify-center pb-10">
+            <li class="flex flex-col items-center gap-2 max-w-50 border-lime-400 border-b-2">
+              <p class="size-11 text-2xl text-black font-bold bg-lime-300 flex justify-center items-center rounded-full">1</p>
+              <h3 class="text-lg">Rellena el formulario</h3>
+              <p class="text-sm">Nombre, teléfono y email. Son 30 segundos.</p>
+            </li>
+            <li class="flex flex-col items-center gap-2 max-w-50">
+              <p class="size-11 text-2xl text-black font-bold text-bold bg-white flex justify-center items-center rounded-full">2</p>
+              <h3 class="text-lg">Te contactamos</h3>
+              <p class="text-sm">Un miembro de nuestro equipo se pone en contacto contigo en 24h laborables.</p>
+            </li>
+            <li class="flex flex-col items-center gap-2 max-w-50">
+              <p class="size-11 text-2xl text-black font-bold text-bold bg-white flex justify-center items-center rounded-full">3</p>
+              <h3 class="text-lg">Llamada de 15 minutos</h3>
+              <p class="text-sm">Nos cuentas qué proceso quieres automatizar o qué app necesitas. Sin tecnicismos.</p>
+            </li>
+            <li class="flex flex-col items-center gap-2 max-w-50">
+              <p class="size-11 text-2xl text-black font-bold bg-white flex justify-center items-center rounded-full">4</p>
+              <h3 class="text-lg">Te enseñamos tu demo</h3>
+              <p class="text-sm">Construimos una demostración funcional, sin coste, y te la presentamos.</p>
+            </li>
+          </ul>
           <div>
-            <h1 class="hero-title">Ve cómo quedaría tu software a medida<span class="accent">…</span> antes de pagar un
-              solo euro.</h1>
-            <p class="hero-subtitle">
-              Desarrollamos el software o la app que tu empresa necesita. Te enseñamos una
-              demostración funcional sin coste para que decidas con algo real delante,
-              no con una promesa.
-            </p>
-            <div class="hero-cta-row">
-              <a class="btn btn-lime btn-lg" href="#demo-form">Pide tu demo gratis</a>
-              <a class="btn btn-outline" href="#casos">Ver pproyectos reales</a>
-            </div>
-            <div class="hero-proof">
-              <span class="stars">★★★★★</span>
-              <span class="label">+30 proyectos entregados · código 100% del cliente</span>
-            </div>
-          </div>
-
-          <div id="demo-form">
-            <div class="form-card">
-              <h3>Pide tu demostración sin coste</h3>
-              <p class="form-sub">Cuéntanos qué necesitas. En 24h laborables te escribimos con los siguientes pasos.</p>
-
-              <div class="ghl-embed">
-                <iframe src="https://api.leadconnectorhq.com/widget/form/WCEM83cs117HgWgAWREj"
-                  style="width:100%;height:100%;border:none;border-radius:4px" id="inline-WCEM83cs117HgWgAWREj"
-                  data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
-                  data-activation-type="alwaysActivated" data-activation-value=""
-                  data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="GOOGLE ADS"
-                  data-height="430" data-layout-iframe-id="inline-WCEM83cs117HgWgAWREj"
-                  data-form-id="WCEM83cs117HgWgAWREj" data-cookie-consent="true" data-cookie-consent-provider="auto"
-                  title="GOOGLE ADS"></iframe>
-              </div>
-              <p class="form-note">Respuesta en 24h laborables · Sin compromiso</p>
-              <p class="legal-note">
+            <iframe src="https://api.leadconnectorhq.com/widget/form/WCEM83cs117HgWgAWREj"
+                style="width:100%;height:100%;border:none;border-radius:4px" id="inline-WCEM83cs117HgWgAWREj-final"
+                data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+                data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
+                data-deactivation-value="" data-form-name="GOOGLE ADS" data-height="430"
+                data-layout-iframe-id="inline-WCEM83cs117HgWgAWREj-final" data-form-id="WCEM83cs117HgWgAWREj"
+                data-cookie-consent="true" data-cookie-consent-provider="auto" title="GOOGLE ADS"></iframe>
+                <p class="form-note pt-20">Respuesta en 24h laborables · Sin compromiso</p>
+                <p class="legal-note">
                 Responsable: DOSCIENTOS DESARROLLO TECNOLOGICO, S.L. Usaremos tus datos solo para responder a tu
                 solicitud. Puedes ejercer tus derechos en hola@doscientos.es. Más información en la
                 <a href="https://doscientos.es/privacy" target="_blank" rel="noopener">política de privacidad</a>.
               </p>
-            </div>
           </div>
-        </div>
       </section>
 
+
+
+
       <!-- 3. BARRA DE CONFIANZA -->
-      <section class="trust-wrap">
+      <section >
+        <h2>Con la confianza de más de 287 millones de creativos, profesionales del marketing y empresas</h2>
         <div class="container">
           <div class="logo-marquee" aria-label="Empresas con las que hemos trabajado">
             <div class="logo-track">
