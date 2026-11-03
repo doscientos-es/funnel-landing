@@ -13,6 +13,8 @@
     content="Demostración funcional sin coste de tu software a medida. Si no te convence, no pagas nada.">
   <meta property="og:image" content="https://doscientos.es/og-image.png">
   <link rel="icon" type="image/svg+xml" href="https://doscientos.es/logo.svg" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://kit.fontawesome.com/a9b5133090.js" crossorigin="anonymous"></script>
 
   <!--
     ====================================================================
@@ -44,12 +46,6 @@
       --border: rgba(255, 255, 255, 0.1);
       --radius: 999px;
       --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -161,7 +157,7 @@
     }
 
     /* ---------- TOPBAR ---------- */
-    .topbar {
+    /* .topbar {
       position: sticky;
       top: 0;
       z-index: 100;
@@ -213,7 +209,7 @@
       .trust-micro {
         display: block;
       }
-    }
+    } */
 
     /* ---------- HERO ---------- */
     .hero {
@@ -932,20 +928,21 @@
 
   <div class="ds-landing">
 
+
     <!-- 1. BARRA SUPERIOR MÍNIMA -->
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <a class="brand" href="#inicio" aria-label="doscientos, ir al inicio">
-          <svg class="brand-logo" aria-hidden="true" focusable="false">
-            <use href="#ds-logo" />
-          </svg>
-          doscientos
-        </a>
-        <div class="topbar-right">
-          <span class="trust-micro">Respuesta en 24h laborables · Sin compromiso</span>
-          <a class="btn btn-lime" href="#demo-form">Pide tu demo gratis</a>
-        </div>
+    <header class="flex justify-center gap-5 h-22 items-center">
+      <a href="#" class="flex w-fit items-center gap-2 rounded-full bg-white px-2 py-3 shadow-lg shadow-lime-300/30">
+        <img src="images/iso.svg" alt="Logo de Doscientos" class="h-3">
+        <span class="text-sm font-semibold leading-none text-[#2f4a32]">doscientos</span>
+      </a>
+      <div class="w-fit bg-white text-black flex items-center rounded-full text-center px-2 py-2 shadow-lg shadow-lime-300/30">
+          <a href="#" class="px-3"><p>Automatizar</p></a>
+          <a href="#" class="px-3"><p>Proyectos</p></a>
+          <a href="#" class="px-3"><p>Nosotros</p></a>
       </div>
+      <a href="#" class="flex w-fit items-center gap-2 rounded-full bg-gray-900 text-black- px-5 py-2 shadow-lg shadow-lime-300/30">
+        <p>Hablemos</p><i class="fa-solid fa-arrow-right text-sm contents-center"></i>
+      </a>
     </header>
 
     <main>
@@ -963,7 +960,7 @@
             </p>
             <div class="hero-cta-row">
               <a class="btn btn-lime btn-lg" href="#demo-form">Pide tu demo gratis</a>
-              <a class="btn btn-outline" href="#casos">Ver proyectos reales</a>
+              <a class="btn btn-outline" href="#casos">Ver pproyectos reales</a>
             </div>
             <div class="hero-proof">
               <span class="stars">★★★★★</span>
