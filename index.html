@@ -13,11 +13,6 @@
     content="Demostración funcional sin coste de tu software a medida. Si no te convence, no pagas nada.">
   <meta property="og:image" content="https://doscientos.es/og-image.png">
   <link rel="icon" type="image/svg+xml" href="https://doscientos.es/logo.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="https://kit.fontawesome.com/a9b5133090.js" crossorigin="anonymous"></script>
 
   <!--
     ====================================================================
@@ -49,6 +44,12 @@
       --border: rgba(255, 255, 255, 0.1);
       --radius: 999px;
       --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -159,6 +160,60 @@
       width: 100%;
     }
 
+    /* ---------- TOPBAR ---------- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 12, 11, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 19px;
+    }
+
+    .brand {
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      height: 30px;
+      width: 30px;
+      border-radius: 8px;
+      flex: 0 0 auto;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .trust-micro {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .trust-micro {
+        display: block;
+      }
+    }
 
     /* ---------- HERO ---------- */
     .hero {
@@ -172,7 +227,26 @@
       align-items: start;
     }
 
-  
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--lime);
+      border: 1px solid rgba(189, 255, 123, 0.3);
+      border-radius: var(--radius);
+      padding: 7px 16px;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    .eyebrow .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 10px var(--lime);
+    }
 
     h1.hero-title {
       font-size: clamp(34px, 4.6vw, 56px);
@@ -321,7 +395,7 @@
     }
 
     .logo-track img {
-      height: 30px;
+      height: 28px;
       width: auto;
       flex: 0 0 auto;
       filter: brightness(0) invert(1);
@@ -770,6 +844,20 @@
       color: var(--text-muted);
     }
 
+    .legal-note {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .legal-note a {
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 980px) {
       .hero-grid {
@@ -828,7 +916,7 @@
   </style>
 </head>
 
-<body class="">
+<body>
   <!-- Logo oficial (internal/landing/public/logo.svg), inline para que funcione aunque
        la página se pegue en GoHighLevel sin acceso a los assets de la landing. -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -844,73 +932,77 @@
 
   <div class="ds-landing">
 
-
-
-    <!-- Mensaje "Agenda abierta para nuevos proyectos" -->
-    <div class="fixed bottom-10 right-10 flex gap-3 border-lime-400 border-1 px-3 py-1 rounded-full items-center text-sm bg-black"> <span class="size-3 rounded-full bg-lime-400"></span> Agenda abierta para nuevos proyectos</div>
-
-    
     <!-- 1. BARRA SUPERIOR MÍNIMA -->
-    <header class="fixed top-0 z-200 flex w-full justify-center pointer-events-none">
-      <a href="https://doscientos.es/" class="pointer-events-auto relative flex items-center gap-2 rounded-b-3xl bg-white px-6 pb-3 pt-2
-        before:content-[''] before:absolute before:top-0 before:-left-4 before:size-4 before:bg-[radial-gradient(circle_at_0_100%,transparent_16px,#fff_16.5px)]
-        after:content-[''] after:absolute after:top-0 after:-right-4 after:size-4 after:bg-[radial-gradient(circle_at_100%_100%,transparent_16px,#fff_16.5px)] hover:shadow-[0_0_30px_rgba(182,255,92,0.45)] transition-shadow duration-500">
-        <img src="images/iso.svg" alt="Logo de Doscientos" class="h-3">
-        <span class="text-sm font-semibold leading-none text-[#2f4a32]">doscientos</span>
-      </a>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="#inicio" aria-label="doscientos, ir al inicio">
+          <svg class="brand-logo" aria-hidden="true" focusable="false">
+            <use href="#ds-logo" />
+          </svg>
+          doscientos
+        </a>
+        <div class="topbar-right">
+          <span class="trust-micro">Respuesta en 24h laborables · Sin compromiso</span>
+          <a class="btn btn-lime" href="#demo-form">Pide tu demo gratis</a>
+        </div>
+      </div>
     </header>
-    
 
     <main>
-      <section id="sectionHero" class="h-screen pt-4 flex flex-col gap-15 pt-30 bg-gradient-to-b from-black via-lime-900 to-black">
-          <ul class="flex gap-30 w-screen box-border text-center justify-center pb-10">
-            <li class="flex flex-col items-center gap-2 max-w-50 border-lime-400 border-b-2">
-              <p class="size-11 text-2xl text-black font-bold bg-lime-300 flex justify-center items-center rounded-full">1</p>
-              <h3 class="text-lg">Rellena el formulario</h3>
-              <p class="text-sm">Nombre, teléfono y email. Son 30 segundos.</p>
-            </li>
-            <li class="flex flex-col items-center gap-2 max-w-50">
-              <p class="size-11 text-2xl text-black font-bold text-bold bg-white flex justify-center items-center rounded-full">2</p>
-              <h3 class="text-lg">Te contactamos</h3>
-              <p class="text-sm">Un miembro de nuestro equipo se pone en contacto contigo en 24h laborables.</p>
-            </li>
-            <li class="flex flex-col items-center gap-2 max-w-50">
-              <p class="size-11 text-2xl text-black font-bold text-bold bg-white flex justify-center items-center rounded-full">3</p>
-              <h3 class="text-lg">Llamada de 15 minutos</h3>
-              <p class="text-sm">Nos cuentas qué proceso quieres automatizar o qué app necesitas. Sin tecnicismos.</p>
-            </li>
-            <li class="flex flex-col items-center gap-2 max-w-50">
-              <p class="size-11 text-2xl text-black font-bold bg-white flex justify-center items-center rounded-full">4</p>
-              <h3 class="text-lg">Te enseñamos tu demo</h3>
-              <p class="text-sm">Construimos una demostración funcional, sin coste, y te la presentamos.</p>
-            </li>
-          </ul>
+      <!-- 2. HERO -->
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
           <div>
-            <iframe src="https://api.leadconnectorhq.com/widget/form/WCEM83cs117HgWgAWREj"
-                style="width:100%;height:100%;border:none;border-radius:4px" id="inline-WCEM83cs117HgWgAWREj-final"
-                data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
-                data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
-                data-deactivation-value="" data-form-name="GaOOGLE ADS" data-height="430"
-                data-layout-iframe-id="inline-WCEM83cs117HgWgAWREj-final" data-form-id="WCEM83cs117HgWgAWREj"
-                data-cookie-consent="true" data-cookie-consent-provider="auto" title="GOOGLE ADS"></iframe>
-                
-                <p class="text-center text-sm pt-22">Respuesta en 24h laborables · Sin compromiso</p>
-                <p class="text-center text-sm">
+            <div class="eyebrow"><span class="dot"></span> Software a medida para pymes</div>
+            <h1 class="hero-title">Ve cómo quedaría tu software a medida<span class="accent">…</span> antes de pagar un
+              solo euro.</h1>
+            <p class="hero-subtitle">
+              Desarrollamos el software o la app que tu empresa necesita. Te enseñamos una
+              demostración funcional sin coste para que decidas con algo real delante,
+              no con una promesa.
+            </p>
+            <div class="hero-cta-row">
+              <a class="btn btn-lime btn-lg" href="#demo-form">Pide tu demo gratis</a>
+              <a class="btn btn-outline" href="#casos">Ver proyectos reales</a>
+            </div>
+            <div class="hero-proof">
+              <span class="stars">★★★★★</span>
+              <span class="label">+30 proyectos entregados · código 100% del cliente</span>
+            </div>
+          </div>
+
+          <div id="demo-form">
+            <div class="form-card">
+              <h3>Pide tu demostración sin coste</h3>
+              <p class="form-sub">Cuéntanos qué necesitas. En 24h laborables te escribimos con los siguientes pasos.</p>
+
+              <div class="ghl-embed">
+                <iframe src="https://api.leadconnectorhq.com/widget/form/WCEM83cs117HgWgAWREj"
+                  style="width:100%;height:100%;border:none;border-radius:4px" id="inline-WCEM83cs117HgWgAWREj"
+                  data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+                  data-activation-type="alwaysActivated" data-activation-value=""
+                  data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="GOOGLE ADS"
+                  data-height="430" data-layout-iframe-id="inline-WCEM83cs117HgWgAWREj"
+                  data-form-id="WCEM83cs117HgWgAWREj" data-cookie-consent="true" data-cookie-consent-provider="auto"
+                  title="GOOGLE ADS"></iframe>
+              </div>
+              <p class="form-note">Respuesta en 24h laborables · Sin compromiso</p>
+              <p class="legal-note">
                 Responsable: DOSCIENTOS DESARROLLO TECNOLOGICO, S.L. Usaremos tus datos solo para responder a tu
                 solicitud. Puedes ejercer tus derechos en hola@doscientos.es. Más información en la
                 <a href="https://doscientos.es/privacy" target="_blank" rel="noopener">política de privacidad</a>.
               </p>
+            </div>
           </div>
+        </div>
       </section>
 
-
-
-
-      <section id="sectionEmpresas" class="bg-[#131710] flex flex-col text-center h-50 border-t-1 justify-center border-b-0">
-        <h2 class="text-xl pt-10 pb-3">Empresas como estas ya confían en nosotros</h2>
-        <div class="w-[1000px] overflow-hidden m-auto">
-          <div class="logo-track">
-            <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac478ac553500f1aa.webp"
+      <!-- 3. BARRA DE CONFIANZA -->
+      <section class="trust-wrap">
+        <div class="container">
+          <div class="logo-marquee" aria-label="Empresas con las que hemos trabajado">
+            <div class="logo-track">
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac478ac553500f1aa.webp"
                 alt="Grúas del Vallès" />
               <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac062e4fb05201d3f.webp"
                 alt="Palumba EU" />
@@ -951,18 +1043,6 @@
                 alt="Ajuntament de Barcelona" aria-hidden="true" />
               <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148195f9172eda86208.svg"
                 alt="Bitácora" aria-hidden="true" />
-          </div>
-        </div>
-      </section>
-
-
-      <!-- 3. BARRA DE CONFIANZA -->
-      <!-- <section class="bg-zinc-800 border-2 border-zinc-600">
-        <h2 class="text-center">“Empresas como estas ya confían en nosotros”</h2>
-        <div class="container">
-          <div class="logo-marquee" aria-label="Empresas con las que hemos trabajado">
-            <div class="logo-track">
-          
             </div>
           </div>
 
@@ -973,7 +1053,7 @@
             <div class="stat"><b>+30</b><span>Proyectos entregados</span></div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- 4. LA DEMOSTRACIÓN SIN COSTE (sección estrella) -->
       <section class="section demo-section" id="demo">
