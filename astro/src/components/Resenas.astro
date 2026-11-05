@@ -1,0 +1,16 @@
+---
+const {comentario, nombre} = Astro.props
+---
+
+<div class="w-[380px] h-50 bg-[#15170f] rounded-xl flex flex-col gap-7 justify-center box-border p-10 border border-white/10 shadow transition-colors duration-200 hover:border-lime-300 bg-red text-white text-center">
+    <p>"{comentario}"</p>
+    <div class="flex gap-3 items-center justify-center">
+        <div class="overflow-hidden size-5 rounded-full">
+            <img src="https://img.magnific.com/foto-gratis/retrato-hombre-blanco-aislado_53876-40306.jpg?semt=ais_hybrid&w=740&q=80" alt="Foto del usuario" class="size-full object-cover">
+        </div>
+        <span>/</span>
+        <p class="text-sm">{nombre}</p>
+        <span>/</span>
+        <div class="text-lime-400">★★★★★</div>
+    </div>
+</div>

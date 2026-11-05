@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --font-doscientos: "Hanken Grotesk", system-ui, sans-serif;
+  
+  --color-bg: #0b0c0b;
+  --color-bg-soft: #131510;
+  --color-card: #15170f;
+  --color-text: #f6f7f2;
+  --color-text-muted: #9a9d92;
+  --color-lime: #bdff7b;
+  --color-lime-dim: #9fe85f;
+  --color-ink: #0c110b;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --radius: 999px;
+
+}
