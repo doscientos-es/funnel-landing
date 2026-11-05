@@ -13,6 +13,9 @@
     content="Demostración funcional sin coste de tu software a medida. Si no te convence, no pagas nada.">
   <meta property="og:image" content="https://doscientos.es/og-image.png">
   <link rel="icon" type="image/svg+xml" href="https://doscientos.es/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="https://kit.fontawesome.com/a9b5133090.js" crossorigin="anonymous"></script>
 
@@ -318,7 +321,7 @@
     }
 
     .logo-track img {
-      height: 28px;
+      height: 30px;
       width: auto;
       flex: 0 0 auto;
       filter: brightness(0) invert(1);
@@ -767,20 +770,6 @@
       color: var(--text-muted);
     }
 
-    .legal-note {
-      margin-top: 10px;
-      font-size: 12px;
-      line-height: 1.5;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    .legal-note a {
-      color: var(--text);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 980px) {
       .hero-grid {
@@ -839,7 +828,7 @@
   </style>
 </head>
 
-<body>
+<body class="">
   <!-- Logo oficial (internal/landing/public/logo.svg), inline para que funcione aunque
        la página se pegue en GoHighLevel sin acceso a los assets de la landing. -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -855,33 +844,25 @@
 
   <div class="ds-landing">
 
+
+
     <!-- Mensaje "Agenda abierta para nuevos proyectos" -->
     <div class="fixed bottom-10 right-10 flex gap-3 border-lime-400 border-1 px-3 py-1 rounded-full items-center text-sm bg-black"> <span class="size-3 rounded-full bg-lime-400"></span> Agenda abierta para nuevos proyectos</div>
 
     
     <!-- 1. BARRA SUPERIOR MÍNIMA -->
-    <header class="flex justify-center gap-5 h-22 items-center fixed w-full z-200">
-      <a href="#" class="flex w-fit items-center gap-2 rounded-full bg-white px-3 py-3 shadow-lg shadow-lime-300/30">
+    <header class="fixed top-0 z-200 flex w-full justify-center pointer-events-none">
+      <a href="https://doscientos.es/" class="pointer-events-auto relative flex items-center gap-2 rounded-b-3xl bg-white px-6 pb-3 pt-2
+        before:content-[''] before:absolute before:top-0 before:-left-4 before:size-4 before:bg-[radial-gradient(circle_at_0_100%,transparent_16px,#fff_16.5px)]
+        after:content-[''] after:absolute after:top-0 after:-right-4 after:size-4 after:bg-[radial-gradient(circle_at_100%_100%,transparent_16px,#fff_16.5px)] hover:shadow-[0_0_30px_rgba(182,255,92,0.45)] transition-shadow duration-500">
         <img src="images/iso.svg" alt="Logo de Doscientos" class="h-3">
         <span class="text-sm font-semibold leading-none text-[#2f4a32]">doscientos</span>
       </a>
-      <div class="w-fit bg-white text-black flex items-center rounded-full text-center px-2 py-2 shadow-lg shadow-lime-300/30">
-          <a href="#" class="px-3"><p>Automatizar</p></a>
-          <a href="#" class="px-3"><p>Proyectos</p></a>
-          <a href="#" class="px-3"><p>Nosotros</p></a>
-      </div>
-      <a href="#" class="flex w-fit items-center gap-2 rounded-full bg-gray-900 text-black- px-5 py-2 shadow-lg shadow-lime-300/30">
-        <p>Hablemos</p><i class="fa-solid fa-arrow-right text-sm contents-center"></i>
-      </a>
     </header>
-
     
 
-    <main class="pt-30">
-
-      <!-- hero -->
-      <section class="h-screen pt-4 flex flex-col gap-15">
-          <!-- <img src="images/iso.svg" alt="" class="absolute -top-30"> -->
+    <main>
+      <section id="sectionHero" class="h-screen pt-4 flex flex-col gap-15 pt-30 bg-gradient-to-b from-black via-lime-900 to-black">
           <ul class="flex gap-30 w-screen box-border text-center justify-center pb-10">
             <li class="flex flex-col items-center gap-2 max-w-50 border-lime-400 border-b-2">
               <p class="size-11 text-2xl text-black font-bold bg-lime-300 flex justify-center items-center rounded-full">1</p>
@@ -909,11 +890,12 @@
                 style="width:100%;height:100%;border:none;border-radius:4px" id="inline-WCEM83cs117HgWgAWREj-final"
                 data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
                 data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
-                data-deactivation-value="" data-form-name="GOOGLE ADS" data-height="430"
+                data-deactivation-value="" data-form-name="GaOOGLE ADS" data-height="430"
                 data-layout-iframe-id="inline-WCEM83cs117HgWgAWREj-final" data-form-id="WCEM83cs117HgWgAWREj"
                 data-cookie-consent="true" data-cookie-consent-provider="auto" title="GOOGLE ADS"></iframe>
-                <p class="form-note pt-20">Respuesta en 24h laborables · Sin compromiso</p>
-                <p class="legal-note">
+                
+                <p class="text-center text-sm pt-22">Respuesta en 24h laborables · Sin compromiso</p>
+                <p class="text-center text-sm">
                 Responsable: DOSCIENTOS DESARROLLO TECNOLOGICO, S.L. Usaremos tus datos solo para responder a tu
                 solicitud. Puedes ejercer tus derechos en hola@doscientos.es. Más información en la
                 <a href="https://doscientos.es/privacy" target="_blank" rel="noopener">política de privacidad</a>.
@@ -924,13 +906,11 @@
 
 
 
-      <!-- 3. BARRA DE CONFIANZA -->
-      <section >
-        <h2>Con la confianza de más de 287 millones de creativos, profesionales del marketing y empresas</h2>
-        <div class="container">
-          <div class="logo-marquee" aria-label="Empresas con las que hemos trabajado">
-            <div class="logo-track">
-              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac478ac553500f1aa.webp"
+      <section id="sectionEmpresas" class="bg-[#131710] flex flex-col text-center h-50 border-t-1 justify-center border-b-0">
+        <h2 class="text-xl pt-10 pb-3">Empresas como estas ya confían en nosotros</h2>
+        <div class="w-[1000px] overflow-hidden m-auto">
+          <div class="logo-track">
+            <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac478ac553500f1aa.webp"
                 alt="Grúas del Vallès" />
               <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac062e4fb05201d3f.webp"
                 alt="Palumba EU" />
@@ -971,6 +951,18 @@
                 alt="Ajuntament de Barcelona" aria-hidden="true" />
               <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148195f9172eda86208.svg"
                 alt="Bitácora" aria-hidden="true" />
+          </div>
+        </div>
+      </section>
+
+
+      <!-- 3. BARRA DE CONFIANZA -->
+      <!-- <section class="bg-zinc-800 border-2 border-zinc-600">
+        <h2 class="text-center">“Empresas como estas ya confían en nosotros”</h2>
+        <div class="container">
+          <div class="logo-marquee" aria-label="Empresas con las que hemos trabajado">
+            <div class="logo-track">
+          
             </div>
           </div>
 
@@ -981,7 +973,7 @@
             <div class="stat"><b>+30</b><span>Proyectos entregados</span></div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- 4. LA DEMOSTRACIÓN SIN COSTE (sección estrella) -->
       <section class="section demo-section" id="demo">
