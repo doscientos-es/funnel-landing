@@ -1,0 +1,386 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+import Header from '../components/Header.astro'
+import AgendaAbiera from '../components/AgendaAbierta.astro'
+import Pasos from '../components/Pasos.astro'
+import Resenas from '../components/Resenas.astro'
+import CasosExito from '../components/CasosExito.astro'
+import Pregunta from '../components/Pregunta.astro'
+
+import '../styles/global.css'
+---
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doscientos — Ve tu software funcionando antes de pagar</title>
+  <meta name="description"
+    content="Desarrollamos el software a medida que tu empresa necesita. Te enseñamos una demostración funcional sin coste antes de que decidas. Precio fijo, 6 semanas, código 100% tuyo." />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Doscientos — Ve tu software funcionando antes de pagar un solo euro">
+  <meta property="og:description"
+    content="Demostración funcional sin coste de tu software a medida. Si no te convence, no pagas nada.">
+  <meta property="og:image" content="https://doscientos.es/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="https://doscientos.es/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a9b5133090.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    @keyframes ds-marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+</style>
+
+
+
+
+<body class="selection:bg-lime-600 selection:text-white">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="ds-logo" viewBox="0 0 859 858">
+      <rect width="858.204" height="858" fill="#BDFF7B" />
+      <path
+        d="M144.518 317.011C174.22 317.011 202.704 328.81 223.706 349.812C244.708 370.814 256.507 399.299 256.507 429C256.507 458.701 244.708 487.186 223.706 508.188C202.704 529.19 174.22 540.989 144.519 540.989H110.5V317.011L144.518 317.011Z"
+        fill="#0C110B" />
+      <circle cx="389.757" cy="429" r="111.989" fill="#0C110B" />
+      <circle cx="634.996" cy="429" r="111.989" fill="#0C110B" />
+    </symbol>
+  </svg>
+
+
+
+
+  <div class="overflow-hidden">
+
+    <!-- Mensaje "Agenda abierta para nuevos proyectos" -->
+    <AgendaAbiera/>
+
+    <!-- HEADER -->
+    <Header/>
+
+
+    <main class="font-doscientos bg-bg">
+
+
+
+
+
+      <!--  HERO   -->
+      <section id="sectionHero" class="h-screen flex flex-col gap-15 pt-20 sm:pt-30 bg-gradient-to-b from-black via-lime-900 pb-[1000px] sm:pb-[200px] to-black">
+          <ul class="order-2 flex flex-col gap-7 w-screen box-border text-center justify-center pb-2 sm:flex-row sm:gap-20 sm:order-1">
+            <Pasos numero="1" titulo="Rellena el formulario" texto="Nombre, teléfono y email. Son 30 segundos." color="bg-lime" borde="border-0 sm:border-b-3"/>
+            <Pasos numero="2" titulo="Te contactamo" texto="Un miembro de nuestro equipo se pone en contacto contigo en 24h laborables."/>
+            <Pasos numero="3" titulo="Llamada de 15 minutos" texto="Nos cuentas qué proceso quieres automatizar o qué app necesitas. Sin tecnicismos."/>
+            <Pasos numero="4" titulo="Te enseñamos tu demo" texto="Construimos una demostración funcional, sin coste, y te la presentamos."/>
+          </ul>
+          <div class="text-gray-300 order-1 sm:order-2">
+            <iframe src="https://api.leadconnectorhq.com/widget/form/WCEM83cs117HgWgAWREj"
+                id="inline-WCEM83cs117HgWgAWREj-final"
+                data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+                data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
+                data-deactivation-value="" data-form-name="GaOOGLE ADS" data-height="430"
+                data-layout-iframe-id="inline-WCEM83cs117HgWgAWREj-final" data-form-id="WCEM83cs117HgWgAWREj"
+                data-cookie-consent="true" data-cookie-consent-provider="auto" title="GOOGLE ADS" class="w-[350px] h-[500px] rounded-2xl m-auto sm:w-[100%] sm:h-[100%]"></iframe>
+                
+                <p class="text-center text-[10px] mx-auto w-full px-4 sm:w-[500px] sm:px-0 mt-10">
+                Responsable: DOSCIENTOS DESARROLLO TECNOLOGICO, S.L. Usaremos tus datos solo para responder a tu
+                solicitud. Puedes ejercer tus derechos en hola@doscientos.es. Más información en la
+                <a href="https://doscientos.es/privacy" target="_blank" rel="noopener">política de privacidad</a>.
+              </p>
+          </div>
+      </section>
+      
+
+
+
+
+      <!--  Testimonios   -->
+      <section id="sectionTestimonios" class="py-16 pt-[230px] sm:pt-0 bg-black pt-[100px] border-b-2">
+        <p class="text-lime text-center font-bold text-sm mb-3">OPINIONES</p>
+        <h3 class="text-center text-2xl font-bold text-white mb-20">Lo que dicen de nosotros</h3>
+        <div class="flex justify-center items-center gap-5 animate-[ds-marquee_32s_linear_infinite] sm:animate-none">
+          <div class="cursor-pointer size-10 text-center content-center rounded-full"><i class="fa-solid fa-angle-left"></i></div>
+          <Resenas comentario="Profesionalidad, cercanía y muy buena atención desde el primer momento. Muy satisfechos." nombre="Sergio Alonso"/>
+          <Resenas comentario="Profesionalidad, cercanía y muy buena atención desde el primer momento. Muy satisfechos." nombre="Pol Guabau Amores"/>
+          <Resenas comentario="Profesionalidad, cercanía y muy buena atención desde el primer momento. Muy satisfechos." nombre="Gerard Martínez"/>
+          <div class="cursor-pointer size-10 text-center content-center rounded-full"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+        <div class="w-[1000px] overflow-hidden m-auto pt-20 pb-40">
+          <div class="flex items-center gap-16  animate-[ds-marquee_32s_linear_infinite]">
+            <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac478ac553500f1aa.webp"
+                alt="Grúas del Vallès" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac062e4fb05201d3f.webp"
+                alt="Palumba EU" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14bc478ac553500f1ca.webp"
+                alt="Salvadis" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14a22bc27f58f942ba8.svg"
+                alt="IFCO Systems" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14adca4eec506073e2a.svg"
+                alt="Ajuntament de Mataró" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148c478ac553500f162.svg"
+                alt="Cashmóvil Canarias" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14a17216aa3b2a2fa65.svg"
+                alt="Optinergia" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14a7d735ea2a15b7157.webp"
+                alt="Golf Natural Guidance" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148195f9172eda86209.svg"
+                alt="Ajuntament de Barcelona" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148195f9172eda86208.svg"
+                alt="Bitácora" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/> -->
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac478ac553500f1aa.webp"
+                alt="Grúas del Vallès" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14ac062e4fb05201d3f.webp"
+                alt="Palumba EU" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14bc478ac553500f1ca.webp"
+                alt="Salvadis" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14a22bc27f58f942ba8.svg"
+                alt="IFCO Systems" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14adca4eec506073e2a.svg"
+                alt="Ajuntament de Mataró" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148c478ac553500f162.svg"
+                alt="Cashmóvil Canarias" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14a17216aa3b2a2fa65.svg"
+                alt="Optinergia" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e14a7d735ea2a15b7157.webp"
+                alt="Golf Natural Guidance" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148195f9172eda86209.svg"
+                alt="Ajuntament de Barcelona" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+              <img src="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148195f9172eda86208.svg"
+                alt="Bitácora" aria-hidden="true" class="h-[30px] w-auto flex-none brightness-0 invert opacity-65 transition-opacity duration-200 ease-in-out hover:opacity-100"/>
+          </div>
+        </div>
+      </section>
+      
+
+
+
+
+
+      <!--  Casos de Exito   -->
+      <section id="sectionCasos" class="w-full flex flex-col justify-center py-50 px-6 border-t-2 border-white">
+          <p class="text-lime text-center font-bold text-sm mb-5">CASOS DE EXITO</p>
+          <h3 class="text-center text-2xl font-bold text-white mb-3">Proyectos reales, resultados mediables</h3>
+          <p class="m-auto text-center text-sm text-gray-400 mb-10 block w-[400px]">Así hemos ayudado a otras empresas a lanzar, automatizar y modernizar su negocio.</p>
+          <div class="flex flex-col gap-30 box-border content-center items-center mt-15">
+
+          <CasosExito img="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148dca4eec506073e05.webp" title="Plataforma para encontrar piso compartido" description="Diseño y desarrollo de producto para una plataforma de alojamiento temporal, de cero a lanzamiento." resultado="500+" ventajas="usuarios orgánicos en 3 mese"/ >
+          <CasosExito img="https://doscientos.es/_astro/admin.DrSqh-Oq_2hx3Cq.webp" title="De tres horas de trabajo a quince minutos" description="Conectamos facturación, generación de documentos y contabilidad dentro de un ERP de logística y aduanas." resultado="-90%" ventajas="de tiempo en procesos manuales" orden="flex-row-reverse"/ >
+          <CasosExito img="https://assets.cdn.filesafe.space/GuoKDbLxUEQs2z98NM2K/media/6ac4e148dca4eec506073e0f.webp" title="Modernizar la gestión sin frenar la operación" description="Migración de más de un millón de registros a un sistema nuevo sin parar el negocio ni un minuto." resultado="0min" ventajas="de tiempo en procesos manuales"/ >
+          </div>
+      </section>
+
+
+
+
+    
+      <!-- Preguntas -->
+      <section id="sectionPreguntas" class="w-full h-min box-border pb-40">
+        <p class="text-lime text-center font-bold text-sm mb-3">PREGUNTAS FRECUENTES</p>
+        <h3 class="text-center text-2xl font-bold text-white">Antes de que preguntes</h3>
+        <div class="flex flex-col items-center mt-13 flex flex-col gap-5">
+          <Pregunta pregunta="¿Cuánto cuesta?" respuesta="La demostración inicial no tiene coste. A partir de ahí, el precio depende del alcance: los MVP sencillos suelen moverse entre 5.000 € y 40.000 € o más para plataformas complejas (IVA no incluido), siempre con precio fijo cerrado por escrito antes de empezar a desarrollar."/>
+          <Pregunta pregunta="¿Qué pasa si no me convence la demo?" respuesta="No pagas nada. La demostración es sin compromiso: si no encaja con lo que necesitas, no sigues adelante y no te cobramos nada por el tiempo invertido."/>
+          <Pregunta pregunta="¿El código es mío?" respuesta="Sí, al 100%. No hay cuotas por usuario ni dependencia de nuestra infraestructura: el código y la propiedad son tuyos desde el primer día."/>
+          <Pregunta pregunta="¿Cuánto tarda un proyecto?" respuesta="Un MVP estándar suele estar listo en 6 semanas, con demostraciones funcionales cada viernes para que veas el avance real."/>
+          <Pregunta pregunta="¿Trabajáis con mi sector?" respuesta="Trabajamos con pymes de sectores muy distintos: administradores de fincas, asesorías energéticas, despachos de abogados, restauración, logística, ecommerce y administraciones públicas, entre otros."/>
+          <Pregunta pregunta="¿Y después del lanzamiento?" respuesta="Incluimos 30 días de soporte tras el lanzamiento para resolver cualquier ajuste. A partir de ahí, podemos seguir dando mantenimiento o entregarte toda la documentación para que lo gestione tu propio equipo."/>
+        </div>
+      </section>
+    </main>
+
+
+
+
+    <!-- Footer -->
+    <footer class="font-dos cientos border-t-1 border-white h-min box-border px-70 py-10 bg-[#161616] text-white">
+      
+      <div class="border-b-1 border-gray-300">
+        <div class="flex gap-5 justify-between py-10 items-center">
+          <div>
+            <h2 class="text-2xl block w-150 text-4xl mb-3 font-bold">Mira tu proyecto funcionando antes de pagar</h2>
+            <p class="text-sm text-gray-400">Demostración gratuita y sin compromiso. Si no te convence, no pagas nada.</p>
+          </div>
+          <a href="#" class="border-1 hover:text-lime border-white rounded-full flex box-border justify-between w-60 h-12 items-center mt-3 px-5 hover:border-lime group">Pedir demostracion<i class="fa-solid fa-arrow-right text-sm -rotate-45 group-hover:rotate-0 duration-200 group-hover:text-lime"></i></a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 justify-between py-20">
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <svg class="w-14 text-white" viewBox="100 80 748 264" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M140.01 80C174.942 80 208.444 93.8768 233.145 118.578C257.846 143.279 271.723 176.78 271.723 211.713C271.723 246.645 257.846 280.147 233.145 304.847C208.444 329.548 174.942 343.425 140.01 343.425H100V80L140.01 80Z" fill="currentColor"/><circle cx="428.441" cy="211.713" r="131.713" fill="currentColor"/><circle cx="716.873" cy="211.713" r="131.713" fill="currentColor"/></svg>
+            <p class="text-3xl font-bold">doscientos</p>
+          </div>
+          <p class="block w-50 mb-4">Software de negocio que funciona en producción.</p>
+          <ul class="flex flex-col text-[12px] gap-3 text-gray-400">
+            <li class="flex gap-2 items-center"><i class="fa-regular fa-envelope"></i>hola@doscientos.es</li>
+            <li class="flex gap-2 items-center"><i class="fa-brands fa-whatsapp"></i>+34 624 14 01 51</li>
+            <li class="block flex gap-2 w-70"><i class="fa-solid fa-location-dot mt-1"></i>Carrer Joan XXIII, 808330 Premià de Mar, Barcelona</li>
+          </ul>
+          <ul class="flex gap-5 mt-6">
+            <a href=""><li class="cursor-pointer size-10 border-1 rounded-full content-center text-center duration-200 hover:border-lime hover:text-lime"><i class="fa-brands fa-linkedin"></i></li></a>
+            <a href=""><li class="cursor-pointer size-10 border-1 rounded-full content-center text-center duration-200 hover:border-lime hover:text-lime"><i class="fa-brands fa-x-twitter"></i></li></a>
+            <a href=""><li class="cursor-pointer size-10 border-1 rounded-full content-center text-center duration-200 hover:border-lime hover:text-lime"><i class="fa-brands fa-github"></i></li></a>
+            <a href=""><li class="cursor-pointer size-10 border-1 rounded-full content-center text-center duration-200 hover:border-lime hover:text-lime"><i class="fa-brands fa-instagram"></i></li></a>
+          </ul>
+        </div>
+        <div>
+          <ul class="text-sm flex flex-col gap-3">
+            <li class="mb-3 text-gray-400">Automatización</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">Diagnóstico de procesos</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">Automatización de procesos</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">Revisión de apps de IA</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">CRM de renovaciones</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">Automatizar Excel</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">Administradores de fincas</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">CRM asesoría energética</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">Empresas de servicios</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">CRM a medida</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">Software a medida para empresas</li>
+            <li class="hover:translate-x-2 duration-200 cursor-pointer">Migración de Excel y Access</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="text-sm flex flex-col gap-3">
+              <li class="mb-3 text-gray-400">Prueba y casos</li>
+              <li class="hover:translate-x-2 duration-200"><a href="/projects">Proyectos</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/projects/optinergia">Caso Optinergia</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/projects/bitacora">BitácoraERP: módulo de facturación</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/open-source">Código abierto</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/changelog">Novedades</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/packs">Packs de webs</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/recursos">Recursos</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/blog">Blog</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/marca">Guía de marca</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/sobre-nosotros">Sobre nosotros</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/opiniones">Opiniones</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/trabaja-con-nosotros">Trabaja con nosotros</a></li>
+              <li class="hover:translate-x-2 duration-200"><a href="/contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="text-sm flex flex-col gap-3">
+            <li class="mb-3 text-gray-400">Zonas</li>
+            <li class="hover:translate-x-2 duration-200"><a href="/desarrollo-web-barcelona">Barcelona</a></li>
+            <li class="hover:translate-x-2 duration-200"><a href="/desarrollo-web-mataro">Mataró</a></li>
+            <li class="hover:translate-x-2 duration-200"><a href="/desarrollo-web-premia-de-mar">Premià de Mar</a></li>
+            <li class="hover:translate-x-2 duration-200"><a href="/desarrollo-web-castellon">Castellón</a></li>
+            <li class="hover:translate-x-2 duration-200"><a href="/agencia-digital-maresme">Maresme</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t-1 border-gray-300 flex justify-between items-center h-20 text-gray-400 text-sm">
+        <p>&copy;2026 Doscientos</p>
+        <ul class="flex gap-10">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Terminos</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Preferencias</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+
+  <!-- Script de GoHighLevel: detecta los iframes de formulario de arriba
+       y ajusta automáticamente su altura real (el valor data-height="430"
+       es solo el alto inicial antes de que cargue el formulario). -->
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+  <!-- Doble envío del lead: GHL ya lo recibe desde el propio iframe. Cuando el formulario
+       se envía bien, GHL avisa a esta página con un postMessage
+       ["set-sticky-contacts", "_ud", "<JSON del contacto>"]. Lo escuchamos y reenviamos el
+       mismo lead al backoffice (/api/public/leads), igual que el formulario de la landing.
+       Si GHL cambiara ese formato, el lead seguiría llegando a GHL pero no al backoffice. -->
+  <script>
+    (function () {
+      var LEADS_ENDPOINT = "https://app.doscientos.es/api/public/leads";
+      var FORM_NAME = "GOOGLE ADS";
+      var sent = {};
+
+      function isOurIframe(source) {
+        var frames = document.querySelectorAll('iframe[data-form-id="WCEM83cs117HgWgAWREj"]');
+        for (var i = 0; i < frames.length; i++) {
+          if (frames[i].contentWindow === source) return true;
+        }
+        return false;
+      }
+
+      function param(name) {
+        try { return new URLSearchParams(window.location.search).get(name) || undefined; }
+        catch (e) { return undefined; }
+      }
+
+      function buildLead(c) {
+        var name = (c.full_name || c.name ||
+          [c.first_name, c.last_name].filter(Boolean).join(" ")).trim();
+        var lead = {
+          name: name || "Lead Google Ads",
+          email: c.email || undefined,
+          phone: c.phone || undefined,
+          company: c.company_name || c.companyName || undefined,
+          message: "Lead desde el formulario \"" + FORM_NAME + "\" (landing de Google Ads, GHL)",
+          language: "es",
+          landing_path: window.location.pathname,
+          landing_ref: "google-ads",
+          landing_subject: document.title,
+          referrer: document.referrer || undefined,
+          gclid: param("gclid"),
+          utm_source: param("utm_source") || (param("gclid") ? "google" : undefined),
+          utm_medium: param("utm_medium") || (param("gclid") ? "cpc" : undefined),
+          utm_campaign: param("utm_campaign"),
+          utm_term: param("utm_term"),
+          utm_content: param("utm_content"),
+          dedupeKey: c.id ? "ghl-" + c.id : undefined,
+          website: ""
+        };
+        Object.keys(lead).forEach(function (k) { if (lead[k] === undefined) delete lead[k]; });
+        return lead;
+      }
+
+      window.addEventListener("message", function (event) {
+        var data = event.data;
+        if (!Array.isArray(data) || data[0] !== "set-sticky-contacts" || data[1] !== "_ud") return;
+        if (!isOurIframe(event.source)) return;
+
+        var contact;
+        try { contact = JSON.parse(data[2]); } catch (e) { return; }
+        if (!contact || (!contact.email && !contact.phone)) return;
+
+        var key = contact.id || contact.email || contact.phone;
+        if (sent[key]) return;
+        sent[key] = true;
+
+        fetch(LEADS_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(buildLead(contact)),
+          keepalive: true
+        }).catch(function () { sent[key] = false; });
+      });
+    })();
+  </script>
+</body>
+
+</html>
