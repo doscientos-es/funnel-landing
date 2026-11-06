@@ -1,8 +1,8 @@
 ---
-const {img, title, description, resultado, ventajas, orden="md:flex-row"} = Astro.props
+const {img, title, description, resultado, ventajas, enlace, orden="md:flex-row"} = Astro.props
 ---
 
-<div class={`flex flex-col ${orden} gap-12 w-full box-border px-0 lg:px-40 xl:px-120 m-auto group text-white`}>
+<div class={`flex flex-col ${orden} gap-7 sm:gap-12 w-full box-border px-0 lg:px-40 xl:px-120 m-auto group text-white`}>
     <div class="overflow-hidden w-full md:w-[380px] h-[230px] bg-white cursor-pointer rounded-xl content-center shrink-0">
         <img src={img} alt="Foto del proyecto" class="w-[100%] object-cover duration-500 group-hover:scale-105">
     </div>
@@ -13,7 +13,7 @@ const {img, title, description, resultado, ventajas, orden="md:flex-row"} = Astr
         <p class="text-lime-300 font-bold text-3xl">{resultado}</p>
         <div class="flex justify-between items-center">
             <p>{ventajas}</p>
-            <a href="" class="text-sm flex gap-2 items-center hover:text-lime-300 duration-300 group/ver">Ver caso <i class="fa-solid fa-arrow-right text-sm -rotate-45 group-hover/ver:rotate-0 duration-200"></i></a>
+            <a href="{enlace}" target="_blank" class="text-sm flex gap-2 items-center hover:text-lime-300 duration-300 group/ver">Ver caso <i class="fa-solid fa-arrow-right text-sm -rotate-45 group-hover/ver:rotate-0 duration-200"></i></a>
         </div>
     </div>
 </div>
